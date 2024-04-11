@@ -53,7 +53,7 @@ pipeline {
                 echo 'TEST STAGE'
 //Alternative to environment definition. Assign username to USERNAME variable and same for password to PWD.
 		withCredentials ([
-		     usernamePassword(credentials: '<ID_OF_CRED>', usernameVariable: USERNAME, passwordVariable: PWD)
+		     usernamePassword(credentialsId: '<ID_OF_CRED>', usernameVariable: USERNAME, passwordVariable: PWD)
 		])  {
 		     sh "some script ${USERNAME} ${PWD}"
 		}
